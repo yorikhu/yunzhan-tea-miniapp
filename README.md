@@ -12,7 +12,7 @@ apps/
 
 ## 环境要求
 
-- Node.js 20+
+- Node.js 20.18+
 - npm 10+
 
 ## 安装依赖
@@ -52,6 +52,15 @@ npm test
 npm run test:e2e
 npm run build
 ```
+
+格式化代码：
+
+```bash
+npm run format
+npm run format:check
+```
+
+提交代码时，Husky 会自动调用 lint-staged 格式化本次暂存的开发文件。
 
 小程序生产产物位于 `apps/miniapp/dist/build/mp-weixin`，后端产物位于 `apps/api/dist`。
 

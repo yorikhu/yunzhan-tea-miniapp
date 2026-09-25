@@ -1,0 +1,6 @@
+node_modules
+dist
+coverage
+.kilo
+package-lock.json
+*.tsbuildinfo

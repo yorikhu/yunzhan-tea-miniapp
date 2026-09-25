@@ -2,6 +2,10 @@
   "name": "yunzhan-tea",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20.18.0",
+    "npm": ">=10.0.0"
+  },
   "workspaces": [
     "apps/*"
   ],
@@ -14,6 +18,15 @@
     "type-check": "npm run type-check --workspaces --if-present",
     "lint": "npm run lint --workspaces --if-present",
     "test": "npm run test --workspaces --if-present",
-    "test:e2e": "npm run test:e2e --workspace @yunzhan/api"
+    "test:e2e": "npm run test:e2e --workspace @yunzhan/api",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint:staged": "lint-staged",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.9.9"
   }
 }
