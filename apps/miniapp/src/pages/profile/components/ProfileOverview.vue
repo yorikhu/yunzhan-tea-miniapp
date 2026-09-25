@@ -12,15 +12,20 @@
     </YzmCard>
 
     <YzmCard class="profile-stats" flat>
-      <view
-        ><text>可用积分</text><text>{{ profile.points }}</text></view
-      >
+      <view class="profile-stats__item">
+        <text class="profile-stats__label">可用积分</text>
+        <text class="profile-stats__value">{{ profile.points }}</text>
+      </view>
       <view class="profile-stats__divider" />
-      <view
-        ><text>优惠券</text><text>{{ profile.coupons }} 张</text></view
-      >
+      <view class="profile-stats__item">
+        <text class="profile-stats__label">优惠券</text>
+        <text class="profile-stats__value">{{ profile.coupons }} 张</text>
+      </view>
       <view class="profile-stats__divider" />
-      <view><text>静心日</text><text>21 天</text></view>
+      <view class="profile-stats__item">
+        <text class="profile-stats__label">静心日</text>
+        <text class="profile-stats__value">21 天</text>
+      </view>
     </YzmCard>
   </view>
 </template>
@@ -80,20 +85,27 @@ defineProps<{ profile: UserProfile }>();
   align-items: center;
 }
 
-.profile-stats > view:not(.profile-stats__divider) {
+.profile-stats__item {
   display: flex;
-  flex: 1;
+  flex: 1 1 0;
+  min-width: 0;
   align-items: center;
   flex-direction: column;
 }
 
-.profile-stats text {
+.profile-stats__label,
+.profile-stats__value {
   display: block;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+.profile-stats__label {
   color: var(--yzm-muted);
   font-size: 18rpx;
 }
 
-.profile-stats text:last-child {
+.profile-stats__value {
   margin-top: 8rpx;
   color: var(--yzm-gold);
   font-family: Georgia, serif;
