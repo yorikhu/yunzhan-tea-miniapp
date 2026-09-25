@@ -1,5 +1,5 @@
 {
-  "name": "yunzhan-tea",
+  "name": "yzm-miniapp",
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -10,15 +10,15 @@
     "apps/*"
   ],
   "scripts": {
-    "dev:miniapp": "npm run dev:mp-weixin --workspace @yunzhan/miniapp",
-    "dev:api": "npm run start:dev --workspace @yunzhan/api",
+    "dev:miniapp": "npm run dev:mp-weixin --workspace @yzm/miniapp",
+    "dev:api": "npm run start:dev --workspace @yzm/api",
     "build": "npm run build:api && npm run build:miniapp",
-    "build:miniapp": "npm run build:mp-weixin --workspace @yunzhan/miniapp",
-    "build:api": "npm run build --workspace @yunzhan/api",
+    "build:miniapp": "npm run build:mp-weixin --workspace @yzm/miniapp",
+    "build:api": "npm run build --workspace @yzm/api",
     "type-check": "npm run type-check --workspaces --if-present",
     "lint": "npm run lint --workspaces --if-present",
     "test": "npm run test --workspaces --if-present",
-    "test:e2e": "npm run test:e2e --workspace @yunzhan/api",
+    "test:e2e": "npm run test:e2e --workspace @yzm/api",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint:staged": "lint-staged",

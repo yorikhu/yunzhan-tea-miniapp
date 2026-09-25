@@ -18,7 +18,7 @@ describe('AppController', () => {
     it('should report that the service is healthy', () => {
       expect(appController.getHealth()).toMatchObject({
         status: 'ok',
-        service: 'yunzhan-tea-api',
+        service: 'yzm-api',
       });
     });
   });

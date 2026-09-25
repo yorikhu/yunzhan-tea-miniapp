@@ -1,4 +1,4 @@
-# 韵盏茶
+# 韵盏茗
 
 使用 npm workspaces 管理的全栈 Monorepo。
 

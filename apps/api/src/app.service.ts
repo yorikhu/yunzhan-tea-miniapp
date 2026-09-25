@@ -5,7 +5,7 @@ export class AppService {
   getHealth() {
     return {
       status: 'ok',
-      service: 'yunzhan-tea-api',
+      service: 'yzm-api',
       timestamp: new Date().toISOString(),
     };
   }

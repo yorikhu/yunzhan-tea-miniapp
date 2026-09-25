@@ -24,7 +24,7 @@ describe('AppController (e2e)', () => {
       .expect(({ body }) => {
         expect(body).toMatchObject({
           status: 'ok',
-          service: 'yunzhan-tea-api',
+          service: 'yzm-api',
         });
         expect(body.timestamp).toEqual(expect.any(String));
       });
