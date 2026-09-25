@@ -10,7 +10,11 @@ lerna-debug.log*
 node_modules
 .DS_Store
 dist
+coverage
+.env
+!.env.example
 *.local
+*.tsbuildinfo
 
 # Editor directories and files
 .idea

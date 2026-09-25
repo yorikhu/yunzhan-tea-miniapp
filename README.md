@@ -1,25 +1,62 @@
-# 韵盏茶小程序
+# 韵盏茶
 
-基于 UniApp、Vue 3、Vite 和 TypeScript 的微信小程序项目。
+使用 npm workspaces 管理的全栈 Monorepo。
 
-## 开发
+## 项目结构
+
+```text
+apps/
+├── miniapp/  # UniApp + Vue 3 + TypeScript 微信小程序
+└── api/      # NestJS 后端服务
+```
+
+## 环境要求
+
+- Node.js 20+
+- npm 10+
+
+## 安装依赖
 
 ```bash
 npm install
-npm run dev:mp-weixin
 ```
 
-开发产物位于 `dist/dev/mp-weixin`，可使用微信开发者工具导入该目录。
+## 本地开发
 
-## 构建
+微信小程序：
+
+```bash
+npm run dev:miniapp
+```
+
+使用微信开发者工具导入 `apps/miniapp/dist/dev/mp-weixin`。
+
+后端服务：
+
+```bash
+cp apps/api/.env.example apps/api/.env
+npm run dev:api
+```
+
+默认监听 `http://localhost:3000`，健康检查地址为：
+
+```text
+GET http://localhost:3000/api/health
+```
+
+## 验证与构建
 
 ```bash
 npm run type-check
-npm run build:mp-weixin
+npm test
+npm run test:e2e
+npm run build
 ```
 
-生产产物位于 `dist/build/mp-weixin`。
+小程序生产产物位于 `apps/miniapp/dist/build/mp-weixin`，后端产物位于 `apps/api/dist`。
 
-## 小程序配置
+## 配置
 
-在 `src/manifest.json` 的 `mp-weixin.appid` 中填写微信小程序 AppID。
+- 在 `apps/miniapp/src/manifest.json` 的 `mp-weixin.appid` 中填写微信小程序 AppID。
+- 后端支持通过 `PORT` 修改端口。
+- `CORS_ORIGIN` 可填写逗号分隔的允许来源；未配置时允许所有来源。
