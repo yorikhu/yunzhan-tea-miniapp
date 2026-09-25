@@ -11,22 +11,26 @@
       </view>
     </YzmCard>
 
-    <YzmCard class="profile-stats" flat>
-      <view class="profile-stats__item">
-        <text class="profile-stats__label">可用积分</text>
-        <text class="profile-stats__value">{{ profile.points }}</text>
-      </view>
-      <view class="profile-stats__divider" />
-      <view class="profile-stats__item">
-        <text class="profile-stats__label">优惠券</text>
-        <text class="profile-stats__value">{{ profile.coupons }} 张</text>
-      </view>
-      <view class="profile-stats__divider" />
-      <view class="profile-stats__item">
-        <text class="profile-stats__label">静心日</text>
-        <text class="profile-stats__value">21 天</text>
-      </view>
-    </YzmCard>
+    <view class="profile-stats-card">
+      <YzmCard flat>
+        <view class="profile-stats">
+          <view class="profile-stats__item">
+            <text class="profile-stats__label">可用积分</text>
+            <text class="profile-stats__value">{{ profile.points }}</text>
+          </view>
+          <view class="profile-stats__divider" />
+          <view class="profile-stats__item">
+            <text class="profile-stats__label">优惠券</text>
+            <text class="profile-stats__value">{{ profile.coupons }} 张</text>
+          </view>
+          <view class="profile-stats__divider" />
+          <view class="profile-stats__item">
+            <text class="profile-stats__label">静心日</text>
+            <text class="profile-stats__value">21 天</text>
+          </view>
+        </view>
+      </YzmCard>
+    </view>
   </view>
 </template>
 
@@ -78,9 +82,12 @@ defineProps<{ profile: UserProfile }>();
   font-size: 38rpx;
 }
 
+.profile-stats-card {
+  margin-top: 16rpx;
+}
+
 .profile-stats {
   display: flex;
-  margin-top: 16rpx;
   padding: 24rpx 0;
   align-items: center;
 }

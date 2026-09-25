@@ -1,5 +1,5 @@
 <template>
-  <YzmCard class="order-panel">
+  <YzmCard>
     <view class="order-panel__title"><text>我的订单</text><text>全部订单 ›</text></view>
     <view class="order-panel__states">
       <view v-for="item in orderStates" :key="item.label">
@@ -24,10 +24,6 @@ const orderStates = [
 </script>
 
 <style scoped>
-.order-panel {
-  margin-top: 20rpx;
-}
-
 .order-panel__title {
   display: flex;
   padding: 24rpx 26rpx;

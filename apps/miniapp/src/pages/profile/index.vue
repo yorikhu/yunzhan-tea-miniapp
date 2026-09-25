@@ -2,8 +2,12 @@
   <view class="page-shell">
     <AppHeader title="我的" subtitle="与一盏茶相处的日子" />
     <ProfileOverview :profile="mockProfile" />
-    <ProfileOrderPanel />
-    <ProfileMenu :coupons="mockProfile.coupons" @select="showComing" />
+    <view class="profile-section">
+      <ProfileOrderPanel />
+    </view>
+    <view class="profile-section">
+      <ProfileMenu :coupons="mockProfile.coupons" @select="showComing" />
+    </view>
 
     <view class="profile-quote">
       <image src="/static/logo.png" mode="aspectFill" />
@@ -26,6 +30,10 @@ const showComing = (label: string) =>
 </script>
 
 <style scoped>
+.profile-section {
+  margin-top: 20rpx;
+}
+
 .profile-quote {
   display: flex;
   margin-top: 40rpx;

@@ -1,5 +1,5 @@
 <template>
-  <YzmCard class="menu-panel">
+  <YzmCard>
     <view
       v-for="item in menus"
       :key="item.label"
@@ -32,10 +32,6 @@ const menus = [
 </script>
 
 <style scoped>
-.menu-panel {
-  margin-top: 20rpx;
-}
-
 .menu-row {
   display: flex;
   min-height: 96rpx;
