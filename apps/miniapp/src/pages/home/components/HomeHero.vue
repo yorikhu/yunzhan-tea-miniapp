@@ -27,12 +27,11 @@ defineEmits<{ shop: []; practice: [] }>();
 .hero {
   position: relative;
   overflow: hidden;
-  min-height: 560rpx;
-  padding: 62rpx 36rpx 40rpx;
-  border: 1rpx solid rgba(23, 63, 56, 0.08);
-  border-radius: 34rpx;
-  background-color: rgba(255, 253, 248, 0.76);
-  box-shadow: var(--yzm-shadow);
+  min-height: 520rpx;
+  padding: 64rpx 36rpx 44rpx;
+  border: 1rpx solid var(--yzm-line);
+  border-radius: 28rpx;
+  background-color: var(--yzm-paper-light);
 }
 
 .hero__copy {
@@ -55,23 +54,24 @@ defineEmits<{ shop: []; practice: [] }>();
 
 .hero__title {
   margin-top: 20rpx;
-  font-size: 62rpx;
-  font-weight: 650;
-  line-height: 1.22;
-  letter-spacing: 4rpx;
+  font-family: 'Songti SC', 'STSong', serif;
+  font-size: 56rpx;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 5rpx;
 }
 
 .hero__description {
   max-width: 450rpx;
   margin-top: 22rpx;
-  color: var(--yzm-ink-soft);
-  font-size: 25rpx;
-  line-height: 1.8;
+  color: var(--yzm-muted);
+  font-size: 23rpx;
+  line-height: 1.9;
 }
 
 .hero__actions {
   display: flex;
-  margin-top: 34rpx;
+  margin-top: 38rpx;
   gap: 14rpx;
 }
 
@@ -87,7 +87,7 @@ defineEmits<{ shop: []; practice: [] }>();
   bottom: 8rpx;
   width: 300rpx;
   height: 260rpx;
-  opacity: 0.82;
+  opacity: 0.66;
 }
 
 .hero__cup {

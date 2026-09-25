@@ -3,7 +3,6 @@
     <view>
       <text v-if="eyebrow" class="section-heading__eyebrow">{{ eyebrow }}</text>
       <view class="section-heading__title-row">
-        <text class="section-heading__mark">一</text>
         <text class="section-heading__title">{{ title }}</text>
       </view>
     </view>
@@ -21,34 +20,24 @@ defineEmits<{ action: [] }>();
 <style scoped>
 .section-heading {
   display: flex;
-  margin-bottom: 22rpx;
+  margin-bottom: 24rpx;
   align-items: flex-end;
   justify-content: space-between;
 }
 
 .section-heading__eyebrow {
   display: block;
-  margin-bottom: 8rpx;
+  margin-bottom: 10rpx;
   color: var(--yzm-gold);
-  font-size: 20rpx;
-  letter-spacing: 5rpx;
-}
-
-.section-heading__title-row {
-  display: flex;
-  align-items: center;
-  gap: 12rpx;
-}
-
-.section-heading__mark {
-  color: var(--yzm-gold);
-  font-size: 28rpx;
+  font-size: 18rpx;
+  letter-spacing: 4rpx;
 }
 
 .section-heading__title {
-  font-size: 38rpx;
-  font-weight: 650;
-  letter-spacing: 2rpx;
+  font-family: 'Songti SC', 'STSong', serif;
+  font-size: 36rpx;
+  font-weight: 600;
+  letter-spacing: 3rpx;
 }
 
 .section-heading__action {

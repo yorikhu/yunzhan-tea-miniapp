@@ -6,7 +6,7 @@
     <view class="artwork__jar">
       <text class="artwork__seal">{{ name.slice(0, 1) }}</text>
     </view>
-    <text class="artwork__caption">YUNZHAN TEA</text>
+    <text class="artwork__caption">YZM · TEA</text>
   </view>
 </template>
 

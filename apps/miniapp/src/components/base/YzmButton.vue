@@ -25,13 +25,13 @@ defineEmits<{ click: [] }>();
 <style scoped>
 .yzm-button {
   display: inline-flex;
-  min-height: 88rpx;
+  min-height: 84rpx;
   margin: 0;
   padding: 0 42rpx;
   align-items: center;
   justify-content: center;
   border-radius: 999rpx;
-  font-size: 29rpx;
+  font-size: 27rpx;
   font-weight: 600;
   line-height: 1;
   transition:
@@ -49,14 +49,14 @@ defineEmits<{ click: [] }>();
 
 .yzm-button--primary {
   color: #fffdf8;
-  background: linear-gradient(135deg, var(--yzm-jade), var(--yzm-jade-dark));
-  box-shadow: 0 12rpx 28rpx rgba(14, 85, 71, 0.2);
+  background: var(--yzm-jade);
+  box-shadow: 0 8rpx 20rpx rgba(16, 75, 64, 0.12);
 }
 
 .yzm-button--outline {
   color: var(--yzm-jade-dark);
   border: 2rpx solid var(--yzm-jade);
-  background: rgba(255, 255, 255, 0.36);
+  background: transparent;
 }
 
 .yzm-button--ghost {
@@ -66,7 +66,7 @@ defineEmits<{ click: [] }>();
 
 .yzm-button--gold {
   color: #fffaf0;
-  background: linear-gradient(135deg, #c48a3c, #a96821);
+  background: var(--yzm-gold);
 }
 
 .yzm-button[disabled] {

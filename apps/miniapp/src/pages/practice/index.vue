@@ -21,11 +21,11 @@
 import AppHeader from '@/components/layout/AppHeader.vue';
 import AppTabBar from '@/components/layout/AppTabBar.vue';
 import SectionHeading from '@/components/base/SectionHeading.vue';
-import PracticeHero from '@/components/practice/PracticeHero.vue';
-import MediaCard from '@/components/practice/MediaCard.vue';
-import MeditationGrid from '@/components/practice/MeditationGrid.vue';
-import ReadingList from '@/components/practice/ReadingList.vue';
-import JournalSection from '@/components/practice/JournalSection.vue';
+import PracticeHero from './components/PracticeHero.vue';
+import MediaCard from './components/MediaCard.vue';
+import MeditationGrid from './components/MeditationGrid.vue';
+import ReadingList from './components/ReadingList.vue';
+import JournalSection from './components/JournalSection.vue';
 import { mockTechniques } from '@/services/mock/data';
 </script>
 

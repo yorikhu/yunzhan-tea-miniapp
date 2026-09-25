@@ -24,7 +24,7 @@
 import { ref } from 'vue';
 import SectionHeading from '@/components/base/SectionHeading.vue';
 import YzmCard from '@/components/base/YzmCard.vue';
-import DiaryComposer from '@/components/practice/DiaryComposer.vue';
+import DiaryComposer from './DiaryComposer.vue';
 import { mockJournalEntries } from '@/services/mock/data';
 
 const entries = ref([...mockJournalEntries]);

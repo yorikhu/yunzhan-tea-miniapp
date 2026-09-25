@@ -25,7 +25,7 @@
 
 <script setup lang="ts">
 import YzmCard from '@/components/base/YzmCard.vue';
-import ProductArtwork from './ProductArtwork.vue';
+import ProductArtwork from '@/components/product/ProductArtwork.vue';
 import type { Product } from '@/types';
 
 defineProps<{ product: Product }>();

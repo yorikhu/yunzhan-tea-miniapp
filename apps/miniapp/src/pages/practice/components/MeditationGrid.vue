@@ -38,13 +38,13 @@ const meditations = [
 <style scoped>
 .meditation-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 14rpx;
 }
 
 .meditation-card {
-  min-height: 300rpx;
-  padding: 24rpx 20rpx;
+  min-height: 0;
+  padding: 28rpx 26rpx;
 }
 
 .meditation-card__symbol,
@@ -78,13 +78,13 @@ const meditations = [
   font-size: 19rpx;
 }
 
-@media (max-width: 430px) {
+@media (min-width: 600px) {
   .meditation-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .meditation-card {
-    min-height: 0;
+    min-height: 280rpx;
   }
 }
 </style>

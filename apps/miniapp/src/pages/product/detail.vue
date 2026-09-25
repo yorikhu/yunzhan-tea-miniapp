@@ -61,7 +61,7 @@ import SectionHeading from '@/components/base/SectionHeading.vue';
 import YzmButton from '@/components/base/YzmButton.vue';
 import YzmCard from '@/components/base/YzmCard.vue';
 import ProductArtwork from '@/components/product/ProductArtwork.vue';
-import ProductSkuPicker from '@/components/product/ProductSkuPicker.vue';
+import ProductSkuPicker from './components/ProductSkuPicker.vue';
 import QuantityStepper from '@/components/product/QuantityStepper.vue';
 import { mockProducts } from '@/services/mock/data';
 import { useCart } from '@/composables/useCart';

@@ -1,5 +1,5 @@
 <template>
-  <view class="yzm-card paper-texture" :class="{ 'yzm-card--flat': flat }">
+  <view class="yzm-card" :class="{ 'yzm-card--flat': flat }">
     <slot />
   </view>
 </template>
@@ -11,9 +11,9 @@ withDefaults(defineProps<{ flat?: boolean }>(), { flat: false });
 <style scoped>
 .yzm-card {
   overflow: hidden;
-  border: 1rpx solid rgba(23, 63, 56, 0.06);
-  border-radius: 28rpx;
-  background-color: rgba(255, 253, 248, 0.88);
+  border: 1rpx solid var(--yzm-line);
+  border-radius: 24rpx;
+  background: var(--yzm-paper-light);
   box-shadow: var(--yzm-shadow);
 }
 

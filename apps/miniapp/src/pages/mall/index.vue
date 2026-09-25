@@ -51,7 +51,7 @@ import { computed, ref } from 'vue';
 import AppHeader from '@/components/layout/AppHeader.vue';
 import AppTabBar from '@/components/layout/AppTabBar.vue';
 import SectionHeading from '@/components/base/SectionHeading.vue';
-import ProductCard from '@/components/product/ProductCard.vue';
+import ProductCard from './components/ProductCard.vue';
 import { mockProducts } from '@/services/mock/data';
 import { useNavigation } from '@/composables/useNavigation';
 import type { Product } from '@/types';

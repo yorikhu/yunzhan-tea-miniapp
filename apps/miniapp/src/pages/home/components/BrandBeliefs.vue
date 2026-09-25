@@ -27,13 +27,13 @@ const beliefs = [
 <style scoped>
 .belief-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 14rpx;
 }
 
 .belief-card {
-  min-height: 250rpx;
-  padding: 26rpx 20rpx;
+  min-height: 0;
+  padding: 28rpx 26rpx;
 }
 
 .belief-card__index,
@@ -49,7 +49,7 @@ const beliefs = [
 }
 
 .belief-card__title {
-  margin-top: 28rpx;
+  margin-top: 16rpx;
   font-size: 27rpx;
   font-weight: 650;
 }
@@ -61,13 +61,13 @@ const beliefs = [
   line-height: 1.7;
 }
 
-@media (max-width: 430px) {
+@media (min-width: 600px) {
   .belief-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .belief-card {
-    min-height: 0;
+    min-height: 240rpx;
   }
 }
 </style>

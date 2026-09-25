@@ -25,20 +25,20 @@ import YzmCard from '@/components/base/YzmCard.vue';
 .founder {
   display: grid;
   padding: 18rpx;
-  grid-template-columns: minmax(220rpx, 0.72fr) 1fr;
+  grid-template-columns: 1fr;
   gap: 26rpx;
 }
 
 .founder__image {
   width: 100%;
-  height: 380rpx;
-  border-radius: 22rpx;
+  height: 420rpx;
+  border-radius: 18rpx;
 }
 
 .founder__content {
   display: flex;
   min-width: 0;
-  padding: 20rpx 10rpx 14rpx 0;
+  padding: 12rpx 14rpx 20rpx;
   flex-direction: column;
   justify-content: center;
 }
@@ -51,8 +51,9 @@ import YzmCard from '@/components/base/YzmCard.vue';
 
 .founder__quote {
   color: var(--yzm-gold);
-  font-size: 34rpx;
-  font-weight: 650;
+  font-family: 'Songti SC', 'STSong', serif;
+  font-size: 32rpx;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -69,13 +70,13 @@ import YzmCard from '@/components/base/YzmCard.vue';
   font-size: 19rpx;
 }
 
-@media (max-width: 430px) {
+@media (min-width: 600px) {
   .founder {
-    grid-template-columns: 0.82fr 1fr;
+    grid-template-columns: minmax(240rpx, 0.72fr) 1fr;
   }
 
   .founder__image {
-    height: 340rpx;
+    height: 400rpx;
   }
 }
 </style>

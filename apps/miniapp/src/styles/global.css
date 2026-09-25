@@ -1,20 +1,18 @@
 page {
-  --yzm-ink: #173f38;
-  --yzm-ink-soft: #45645e;
-  --yzm-jade: #176b59;
-  --yzm-jade-dark: #0e5547;
-  --yzm-gold: #b8782e;
-  --yzm-paper: #f5f0e6;
-  --yzm-paper-light: #fbf8f1;
-  --yzm-line: rgba(23, 63, 56, 0.12);
-  --yzm-muted: #7d8580;
-  --yzm-shadow: 0 14rpx 40rpx rgba(55, 45, 28, 0.08);
+  --yzm-ink: #173c35;
+  --yzm-ink-soft: #4d615c;
+  --yzm-jade: #155e50;
+  --yzm-jade-dark: #104b40;
+  --yzm-gold: #a96f2b;
+  --yzm-paper: #f6f3ec;
+  --yzm-paper-light: #fcfaf5;
+  --yzm-line: rgba(20, 52, 46, 0.1);
+  --yzm-muted: #7b837f;
+  --yzm-shadow: 0 8rpx 28rpx rgba(44, 42, 34, 0.045);
   min-height: 100%;
   color: var(--yzm-ink);
-  background:
-    radial-gradient(circle at 10% 5%, rgba(255, 255, 255, 0.78), transparent 32%),
-    linear-gradient(145deg, #f8f4eb 0%, #f2ecdf 100%);
-  font-family: 'PingFang SC', 'Noto Serif SC', 'Songti SC', serif;
+  background: var(--yzm-paper);
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 28rpx;
 }
 
@@ -37,31 +35,35 @@ button::after {
   max-width: 980rpx;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 0 28rpx calc(150rpx + env(safe-area-inset-bottom));
+  overflow-x: hidden;
+  padding: 0 32rpx 148rpx;
+  padding-bottom: calc(148rpx + constant(safe-area-inset-bottom));
+  padding-bottom: calc(148rpx + env(safe-area-inset-bottom));
 }
 
 .page-shell--no-tab {
-  padding-bottom: calc(40rpx + env(safe-area-inset-bottom));
+  padding-bottom: 48rpx;
+  padding-bottom: calc(48rpx + constant(safe-area-inset-bottom));
+  padding-bottom: calc(48rpx + env(safe-area-inset-bottom));
 }
 
 .page-section {
-  margin-top: 42rpx;
+  margin-top: 52rpx;
 }
 
 .paper-texture {
-  background-image: radial-gradient(rgba(23, 63, 56, 0.035) 0.7rpx, transparent 0.7rpx);
-  background-size: 12rpx 12rpx;
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.32), transparent 42%);
 }
 
 .scroll-row {
-  width: calc(100% + 28rpx);
-  margin-right: -28rpx;
+  width: calc(100% + 32rpx);
+  margin-right: -32rpx;
   white-space: nowrap;
 }
 
 .price {
   color: var(--yzm-gold);
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: 'Times New Roman', Georgia, serif;
   font-weight: 600;
 }
 
@@ -71,7 +73,7 @@ button::after {
 
 @media (min-width: 760px) {
   .page-shell {
-    padding-right: 42rpx;
-    padding-left: 42rpx;
+    padding-right: 48rpx;
+    padding-left: 48rpx;
   }
 }

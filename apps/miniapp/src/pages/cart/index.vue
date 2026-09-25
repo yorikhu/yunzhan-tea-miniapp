@@ -46,7 +46,7 @@ import AppHeader from '@/components/layout/AppHeader.vue';
 import AppTabBar from '@/components/layout/AppTabBar.vue';
 import YzmButton from '@/components/base/YzmButton.vue';
 import YzmCard from '@/components/base/YzmCard.vue';
-import CartProductRow from '@/components/cart/CartProductRow.vue';
+import CartProductRow from './components/CartProductRow.vue';
 import { useCart } from '@/composables/useCart';
 import { useNavigation } from '@/composables/useNavigation';
 

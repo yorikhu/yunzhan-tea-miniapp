@@ -14,13 +14,15 @@ apps/
 
 ```text
 apps/miniapp/src/
-├── components/   # 基础、布局及业务复用组件
+├── components/   # 仅存放全局可复用组件
 ├── composables/  # 购物车与导航等复用逻辑
 ├── pages/        # 页面容器
 ├── services/     # Chance Mock 数据服务
 ├── styles/       # 全局设计变量与响应式基础样式
 └── types/        # 业务类型
 ```
+
+仅由单个页面使用的业务组件放在对应页面的 `components/` 目录中，避免把页面私有实现注册为全局组件。
 
 当前前端数据由 npm 包 `chance` 生成，后续接入 NestJS API 时只需替换 `services/mock` 数据层。
 

@@ -14,12 +14,12 @@
 <script setup lang="ts">
 import AppHeader from '@/components/layout/AppHeader.vue';
 import AppTabBar from '@/components/layout/AppTabBar.vue';
-import HomeHero from '@/components/home/HomeHero.vue';
-import FounderStory from '@/components/home/FounderStory.vue';
-import BrandBeliefs from '@/components/home/BrandBeliefs.vue';
-import OriginStory from '@/components/home/OriginStory.vue';
-import CraftTimeline from '@/components/home/CraftTimeline.vue';
-import TeaLatitude from '@/components/home/TeaLatitude.vue';
+import HomeHero from './components/HomeHero.vue';
+import FounderStory from './components/FounderStory.vue';
+import BrandBeliefs from './components/BrandBeliefs.vue';
+import OriginStory from './components/OriginStory.vue';
+import CraftTimeline from './components/CraftTimeline.vue';
+import TeaLatitude from './components/TeaLatitude.vue';
 import { mockProducts } from '@/services/mock/data';
 import { useNavigation } from '@/composables/useNavigation';
 
