@@ -10,6 +10,20 @@ apps/
 └── api/      # NestJS 后端服务
 ```
 
+小程序前端按职责拆分：
+
+```text
+apps/miniapp/src/
+├── components/   # 基础、布局及业务复用组件
+├── composables/  # 购物车与导航等复用逻辑
+├── pages/        # 页面容器
+├── services/     # Chance Mock 数据服务
+├── styles/       # 全局设计变量与响应式基础样式
+└── types/        # 业务类型
+```
+
+当前前端数据由 npm 包 `chance` 生成，后续接入 NestJS API 时只需替换 `services/mock` 数据层。
+
 ## 环境要求
 
 - Node.js 20.18+

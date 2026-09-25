@@ -1,0 +1,90 @@
+<template>
+  <view class="page-section">
+    <SectionHeading eyebrow="MEDITATION" title="独立冥想" />
+    <view class="meditation-grid">
+      <YzmCard v-for="item in meditations" :key="item.title" flat>
+        <view class="meditation-card">
+          <text class="meditation-card__symbol">{{ item.symbol }}</text>
+          <text class="meditation-card__title">{{ item.title }}</text>
+          <text class="meditation-card__text">{{ item.text }}</text>
+          <text class="meditation-card__meta">{{ item.duration }} ›</text>
+        </view>
+      </YzmCard>
+    </view>
+  </view>
+</template>
+
+<script setup lang="ts">
+import SectionHeading from '@/components/base/SectionHeading.vue';
+import YzmCard from '@/components/base/YzmCard.vue';
+
+const meditations = [
+  { symbol: '◉', title: '脉轮冥想', text: '依次感受身体七个区域的能量变化。', duration: '12 分钟' },
+  {
+    symbol: '○',
+    title: '正念冥想',
+    text: '观察呼吸、声音与念头，不跟随、不抗拒。',
+    duration: '8 分钟',
+  },
+  {
+    symbol: '☀',
+    title: '元气冥想',
+    text: '用温暖意象恢复清醒、稳定的行动力。',
+    duration: '10 分钟',
+  },
+];
+</script>
+
+<style scoped>
+.meditation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14rpx;
+}
+
+.meditation-card {
+  min-height: 300rpx;
+  padding: 24rpx 20rpx;
+}
+
+.meditation-card__symbol,
+.meditation-card__title,
+.meditation-card__text,
+.meditation-card__meta {
+  display: block;
+}
+
+.meditation-card__symbol {
+  color: var(--yzm-gold);
+  font-size: 44rpx;
+}
+
+.meditation-card__title {
+  margin-top: 20rpx;
+  font-size: 27rpx;
+  font-weight: 650;
+}
+
+.meditation-card__text {
+  margin-top: 12rpx;
+  color: var(--yzm-muted);
+  font-size: 20rpx;
+  line-height: 1.6;
+}
+
+.meditation-card__meta {
+  margin-top: 22rpx;
+  color: var(--yzm-jade);
+  font-size: 19rpx;
+}
+
+@media (max-width: 430px) {
+  .meditation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .meditation-card {
+    min-height: 0;
+  }
+}
+</style>

@@ -1,0 +1,44 @@
+<template>
+  <view class="stepper">
+    <text class="stepper__button" @click="$emit('update:modelValue', Math.max(1, modelValue - 1))"
+      >−</text
+    >
+    <text class="stepper__value">{{ modelValue }}</text>
+    <text class="stepper__button" @click="$emit('update:modelValue', modelValue + 1)">＋</text>
+  </view>
+</template>
+
+<script setup lang="ts">
+defineProps<{ modelValue: number }>();
+defineEmits<{ 'update:modelValue': [value: number] }>();
+</script>
+
+<style scoped>
+.stepper {
+  display: inline-flex;
+  overflow: hidden;
+  height: 60rpx;
+  align-items: center;
+  border: 1rpx solid var(--yzm-line);
+  border-radius: 999rpx;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.stepper__button,
+.stepper__value {
+  min-width: 58rpx;
+  line-height: 58rpx;
+  text-align: center;
+}
+
+.stepper__button {
+  color: var(--yzm-ink-soft);
+  font-family: Arial, sans-serif;
+  font-size: 28rpx;
+}
+
+.stepper__value {
+  min-width: 48rpx;
+  font-size: 25rpx;
+}
+</style>

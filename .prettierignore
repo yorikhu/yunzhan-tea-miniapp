@@ -3,4 +3,5 @@ dist
 coverage
 .kilo
 package-lock.json
+pnpm-lock.yaml
 *.tsbuildinfo
