@@ -9,7 +9,7 @@ export const tabRoutes = {
 export type TabKey = keyof typeof tabRoutes;
 
 export function useNavigation() {
-  const goTab = (key: TabKey) => uni.reLaunch({ url: tabRoutes[key] });
+  const goTab = (key: TabKey) => uni.switchTab({ url: tabRoutes[key] });
   const goTo = (url: string) => uni.navigateTo({ url });
   const goBack = () => uni.navigateBack();
 

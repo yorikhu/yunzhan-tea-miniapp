@@ -7,13 +7,11 @@
     <OriginStory />
     <CraftTimeline />
     <TeaLatitude :products="mockProducts" @shop="goTab('mall')" @select="openProduct" />
-    <AppTabBar active="home" />
   </view>
 </template>
 
 <script setup lang="ts">
 import AppHeader from '@/components/layout/AppHeader.vue';
-import AppTabBar from '@/components/layout/AppTabBar.vue';
 import HomeHero from './components/HomeHero.vue';
 import FounderStory from './components/FounderStory.vue';
 import BrandBeliefs from './components/BrandBeliefs.vue';

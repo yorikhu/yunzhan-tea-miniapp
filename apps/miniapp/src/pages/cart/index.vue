@@ -36,14 +36,11 @@
         >结算({{ selectedCount }})</YzmButton
       >
     </view>
-
-    <AppTabBar active="cart" />
   </view>
 </template>
 
 <script setup lang="ts">
 import AppHeader from '@/components/layout/AppHeader.vue';
-import AppTabBar from '@/components/layout/AppTabBar.vue';
 import YzmButton from '@/components/base/YzmButton.vue';
 import YzmCard from '@/components/base/YzmCard.vue';
 import CartProductRow from './components/CartProductRow.vue';
@@ -58,7 +55,7 @@ const goCheckout = () => selectedCount.value > 0 && goTo('/pages/checkout/index'
 
 <style scoped>
 .cart-page {
-  padding-bottom: calc(280rpx + env(safe-area-inset-bottom));
+  padding-bottom: 160rpx;
 }
 
 .cart-list {
@@ -90,7 +87,7 @@ const goCheckout = () => selectedCount.value > 0 && goTo('/pages/checkout/index'
   position: fixed;
   z-index: 21;
   right: 20rpx;
-  bottom: calc(126rpx + env(safe-area-inset-bottom));
+  bottom: calc(20rpx + var(--window-bottom, 0px));
   left: 20rpx;
   display: flex;
   max-width: 940rpx;

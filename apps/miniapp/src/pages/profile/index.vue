@@ -13,13 +13,11 @@
       <image src="/static/logo.png" mode="aspectFill" />
       <text>愿每一次举杯，都更靠近真实的自己</text>
     </view>
-    <AppTabBar active="profile" />
   </view>
 </template>
 
 <script setup lang="ts">
 import AppHeader from '@/components/layout/AppHeader.vue';
-import AppTabBar from '@/components/layout/AppTabBar.vue';
 import ProfileOverview from './components/ProfileOverview.vue';
 import ProfileOrderPanel from './components/ProfileOrderPanel.vue';
 import ProfileMenu from './components/ProfileMenu.vue';

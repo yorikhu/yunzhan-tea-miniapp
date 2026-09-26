@@ -13,13 +13,11 @@
     <MeditationGrid />
     <ReadingList />
     <JournalSection />
-    <AppTabBar active="practice" />
   </view>
 </template>
 
 <script setup lang="ts">
 import AppHeader from '@/components/layout/AppHeader.vue';
-import AppTabBar from '@/components/layout/AppTabBar.vue';
 import SectionHeading from '@/components/base/SectionHeading.vue';
 import PracticeHero from './components/PracticeHero.vue';
 import MediaCard from './components/MediaCard.vue';

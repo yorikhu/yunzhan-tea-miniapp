@@ -15,5 +15,43 @@
     "navigationBarBackgroundColor": "#f5f0e6",
     "backgroundColor": "#f5f0e6",
     "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#7b837f",
+    "selectedColor": "#155e50",
+    "backgroundColor": "#fcfaf5",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页",
+        "iconPath": "static/icons/home.png",
+        "selectedIconPath": "static/icons/home-active.png"
+      },
+      {
+        "pagePath": "pages/mall/index",
+        "text": "商城",
+        "iconPath": "static/icons/mall.png",
+        "selectedIconPath": "static/icons/mall-active.png"
+      },
+      {
+        "pagePath": "pages/practice/index",
+        "text": "静心",
+        "iconPath": "static/icons/practice.png",
+        "selectedIconPath": "static/icons/practice-active.png"
+      },
+      {
+        "pagePath": "pages/cart/index",
+        "text": "购物车",
+        "iconPath": "static/icons/cart.png",
+        "selectedIconPath": "static/icons/cart-active.png"
+      },
+      {
+        "pagePath": "pages/profile/index",
+        "text": "我的",
+        "iconPath": "static/icons/profile.png",
+        "selectedIconPath": "static/icons/profile-active.png"
+      }
+    ]
   }
 }

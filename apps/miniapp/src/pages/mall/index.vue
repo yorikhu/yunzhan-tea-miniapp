@@ -41,15 +41,12 @@
         />
       </view>
     </view>
-
-    <AppTabBar active="mall" />
   </view>
 </template>
 
 <script setup lang="ts">
 import { computed, ref } from 'vue';
 import AppHeader from '@/components/layout/AppHeader.vue';
-import AppTabBar from '@/components/layout/AppTabBar.vue';
 import SectionHeading from '@/components/base/SectionHeading.vue';
 import ProductCard from './components/ProductCard.vue';
 import { mockProducts } from '@/services/mock/data';
