@@ -1,6 +1,6 @@
 # 韵盏茗
 
-使用 npm workspaces 管理的全栈 Monorepo。
+使用 pnpm workspaces 管理的全栈 Monorepo。
 
 ## 项目结构
 
@@ -24,17 +24,17 @@ apps/miniapp/src/
 
 仅由单个页面使用的业务组件放在对应页面的 `components/` 目录中，避免把页面私有实现注册为全局组件。
 
-当前前端数据由 npm 包 `chance` 生成，后续接入 NestJS API 时只需替换 `services/mock` 数据层。
+当前前端数据由依赖包 `chance` 生成，后续接入 NestJS API 时只需替换 `services/mock` 数据层。
 
 ## 环境要求
 
 - Node.js 20.18+
-- npm 10+
+- pnpm 10+
 
 ## 安装依赖
 
 ```bash
-npm install
+pnpm install
 ```
 
 ## 本地开发
@@ -42,7 +42,7 @@ npm install
 微信小程序：
 
 ```bash
-npm run dev:miniapp
+pnpm dev:miniapp
 ```
 
 使用微信开发者工具导入 `apps/miniapp/dist/dev/mp-weixin`。
@@ -51,7 +51,7 @@ npm run dev:miniapp
 
 ```bash
 cp apps/api/.env.example apps/api/.env
-npm run dev:api
+pnpm dev:api
 ```
 
 默认监听 `http://localhost:3000`，健康检查地址为：
@@ -63,17 +63,17 @@ GET http://localhost:3000/api/health
 ## 验证与构建
 
 ```bash
-npm run type-check
-npm test
-npm run test:e2e
-npm run build
+pnpm type-check
+pnpm test
+pnpm test:e2e
+pnpm build
 ```
 
 格式化代码：
 
 ```bash
-npm run format
-npm run format:check
+pnpm format
+pnpm format:check
 ```
 
 提交代码时，Husky 会自动调用 lint-staged 格式化本次暂存的开发文件。

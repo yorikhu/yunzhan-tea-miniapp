@@ -2,23 +2,21 @@
   "name": "yzm-miniapp",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@12.3.4",
   "engines": {
     "node": ">=20.18.0",
-    "npm": ">=10.0.0"
+    "pnpm": ">=10.0.0"
   },
-  "workspaces": [
-    "apps/*"
-  ],
   "scripts": {
-    "dev:miniapp": "npm run dev:mp-weixin --workspace @yzm/miniapp",
-    "dev:api": "npm run start:dev --workspace @yzm/api",
-    "build": "npm run build:api && npm run build:miniapp",
-    "build:miniapp": "npm run build:mp-weixin --workspace @yzm/miniapp",
-    "build:api": "npm run build --workspace @yzm/api",
-    "type-check": "npm run type-check --workspaces --if-present",
-    "lint": "npm run lint --workspaces --if-present",
-    "test": "npm run test --workspaces --if-present",
-    "test:e2e": "npm run test:e2e --workspace @yzm/api",
+    "dev:miniapp": "pnpm --filter @yzm/miniapp dev:mp-weixin",
+    "dev:api": "pnpm --filter @yzm/api start:dev",
+    "build": "pnpm run build:api && pnpm run build:miniapp",
+    "build:miniapp": "pnpm --filter @yzm/miniapp build:mp-weixin",
+    "build:api": "pnpm --filter @yzm/api build",
+    "type-check": "pnpm -r --if-present run type-check",
+    "lint": "pnpm -r --if-present run lint",
+    "test": "pnpm -r --if-present run test",
+    "test:e2e": "pnpm --filter @yzm/api test:e2e",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint:staged": "lint-staged",
